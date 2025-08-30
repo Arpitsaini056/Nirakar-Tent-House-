@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirakar Tent House - Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body class="home-body">
+
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="title">✨ Nirakar Tent House ✨</h1>
+    <h2 class="owners">Rishipal Saini & Anand Saini</h2>
+    <p class="contact">📞 9756426774 | 9917793938 | 9058979076</p>
+  </header>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+      <div class="card">💍 Wedding</div>
+      <div class="card">🌿 Mehndi</div>
+      <div class="card">🎉 Party</div>
+      <div class="card">✨ Other Functions</div>
+    </div>
+  </section>
+
+  <!-- Book Now Button -->
+  <div class="book-now-container">
+    <button class="book-now-btn" onclick="openForm('General Booking')">📖 Book Now</button>
+  </div>
+
+  <!-- Gallery Button -->
+  <div class="gallery-container">
+    <a href="gallery.html">
+      <button class="gallery-btn">🖼 View Gallery</button>
+    </a>
+  </div>
+
+  <!-- Popup Booking Form -->
+  <div id="popupForm" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h2 id="formTitle">Book Your Event</h2>
+      <form id="bookingForm" onsubmit="handleBooking(event)">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+        <input type="text" id="address" name="address" placeholder="Address" required>
+        <input type="date" id="date" name="date" required>
+        <textarea id="message" name="message" placeholder="Message (Optional)"></textarea>
+        <input type="hidden" id="functionType" name="function">
+        <button type="submit">Submit Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>
